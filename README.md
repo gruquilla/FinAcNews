@@ -11,11 +11,10 @@ Academic paper fetcher and summariser for Fintech related topics.
 - [The project in detail](#the-project-in-detail)
 
 ## What is FinAcNews?
-FinAcNews is a Python-based tool designed to fetch academic articles from a curated selection of reputable websites covering the FinTech sector. 
+FinAcNews is a modular Python pipeline that fetches, filters, and summarises academic FinTech research from leading journals and archives.
 <br />
-It automatically parses RSS feeds, filters the results using customisable keywords, and distils each article into a concise, plain-English summary, making complex research more accessible at a glance. Each summary comes with a link to access the full article online.
-<br />
-Users can tailor the script to define how far back in time it should search, which keywords trigger inclusion, and whether to display direct links to the original sources.
+
+Designed for analysts, researchers, and enthusiasts, it transforms dense abstracts into digestible insights—complete with keyword highlighting, interactive tables, and full-source links.
 <br />
 
 ## Quick preview
@@ -24,12 +23,17 @@ Users can tailor the script to define how far back in time it should search, whi
 ## The project in detail
 Here is how FinAcNews works:
 * **Step 1: Configuration** <br />
-  _In this part,the script defines customisable aspects of the research, such as the number of days of articles it should fetch and the keywords used for filtering articles._
+  _In this part, the script defines customisable aspects of the research, such as the number of days of articles it should fetch and the keywords used for filtering articles._
 <br />
 
 * **Step 2: Summariser setup** <br />
   _After checking whether the system has a d-GPU, this part defines the function that will be used to summarise the articles using the BART model. Keep in mind: the script doesn't scrape anything, it just fetches the article academic summary and summarises it to make it more accessible. As a result, only the academic summary - and not the complete article- are summarised. However, this is more than often enough to give an overview to the user and let him decide wether or not he should check out the full article._
+  
+  _This project uses the Transformers library by Hugging Face to perform text summarization via the facebook/bart-large-cnn model. The model is licensed under the MIT License, and the implementation is made possible thanks to the Hugging Face team and contributors._
+
+_Model reference: Lewis, M., Liu, Y., Goyal, N., Ghazvininejad, M., Mohamed, A., Levy, O., Stoyanov, V., & Zettlemoyer, L. (2020). BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension. Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics. arXiv:1910.13461_
 <br />
+
 
 * **Step 3: Helpers** <br />
   _A series of functions that:_
@@ -48,6 +52,10 @@ Here is how FinAcNews works:
     * The Journal of Fintech (worldscientific.com)
     * ARXIV (q-fin and CS CR tipics)
     * IMF (Working papers, World Economic Outlook, International economic and financial papers). Not always relevant, but from time to time it's interesting to see what the IMF discusses about FinTech.
+  <br />
+  
+  _Note: This script does not scrape the data from the websites, and only fetches the publicly available data through RSS feeds. Full articles remain the intellectual property of their respective publishers and authors._
+
 <br />
 
 * **Step 5: Display** <br />
