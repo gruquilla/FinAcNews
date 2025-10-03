@@ -2,7 +2,8 @@
 Academic paper fetcher and summariser for Fintech related topics.
 <br />
 <br />
-📘 Access the FinAcNews Notebook: (To be published) 
+📘 Access the FinAcNews Notebook: <br />
+[Open Version 1.4](https://github.com/gruquilla/FinAcNews/blob/main/FinAcNews%20V1.4.ipynb)
 <br />
 
 ## Table of contents
