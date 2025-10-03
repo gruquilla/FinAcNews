@@ -18,6 +18,10 @@ FinAcNews is a modular Python pipeline that fetches, filters, and summarises aca
 Designed for analysts, researchers, and enthusiasts, it transforms dense abstracts into digestible insights—complete with keyword highlighting, interactive tables, and full-source links.
 <br />
 
+Not working in FinTech? No problem! You can easily adapt this script for your own field by:
+* Defining your own key-word list
+* Replacing the media links by others related to your field (just make sure to get the link of a valid RSS feed from their website)
+
 ## Quick preview
 ![alt text](https://github.com/gruquilla/FinAcNews/blob/main/preview.jpg "Script output preview")
 
