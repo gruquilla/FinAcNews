@@ -18,7 +18,7 @@ Designed for analysts, researchers, and enthusiasts, it transforms dense abstrac
 <br />
 
 ## Quick preview
-<br />
+![alt text](https://github.com/gruquilla/FinAcNews/blob/main/preview.jpg "Script output preview")
 
 ## The project in detail
 Here is how FinAcNews works:
@@ -32,6 +32,7 @@ Here is how FinAcNews works:
   _This project uses the Transformers library by Hugging Face to perform text summarization via the facebook/bart-large-cnn model. The model is licensed under the MIT License, and the implementation is made possible thanks to the Hugging Face team and contributors._
 
 _Model reference: Lewis, M., Liu, Y., Goyal, N., Ghazvininejad, M., Mohamed, A., Levy, O., Stoyanov, V., & Zettlemoyer, L. (2020). BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension. Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics. arXiv:1910.13461_
+
 <br />
 
 
